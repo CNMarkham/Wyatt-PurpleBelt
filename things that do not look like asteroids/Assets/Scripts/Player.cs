@@ -35,10 +35,11 @@ public class Player : MonoBehaviour
             Vector3.ClampMagnitude(velocity, maxSpeed);
             rb.velocity = velocity;
 
-            if (Input.GetKey(KeyCode.Space))
-            {
-                Instantiate(bulletPrefab, transform.position, transform.rotation);
-            }
+          
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(bulletPrefab, transform.position, transform.rotation);
         }
     }
 }
