@@ -16,7 +16,7 @@ public class Asteroid : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
