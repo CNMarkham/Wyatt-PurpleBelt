@@ -9383,6 +9383,7 @@ GameObject:
   - component: {fileID: 2034427275}
   - component: {fileID: 2034427274}
   - component: {fileID: 2034427276}
+  - component: {fileID: 2034427277}
   m_Layer: 6
   m_Name: Pac-Man
   m_TagString: Untagged
@@ -9514,6 +9515,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2034427277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034427271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa8de57c839dde94fa2aff5bb6b4609f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
+  initialDirection: {x: 1, y: 0}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1001 &3399174667255044371
 PrefabInstance:
   m_ObjectHideFlags: 0

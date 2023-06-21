@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Boxcast = origin,size,angle,direction,
 public abstract class Movement : MonoBehaviour
 {
     public float speed;
@@ -15,14 +16,17 @@ public abstract class Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-       direction = initialDirection;
+        direction = initialDirection;
         nextDirection = Vector2.zero;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(nextDirection != Vector2.zero)
+        {
+            SetDirection(nextDirection);
+        }
     }
 
     private void FixedUpdate()
@@ -33,3 +37,24 @@ public abstract class Movement : MonoBehaviour
         rb.MovePosition(position + translation);
     }
 
+    private bool Occupied(Vector2 newDirection)
+    {
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one * 0.75f, 0f, newDirection, 1.5f, obstacleLayer);
+        return hit.collider != null;
+
+    }
+
+    protected void SetDirection(Vector2 newDirection)
+    {
+        if (!Occupied(newDirection))
+        {
+            direction = newDirection;
+            nextDirection = Vector2.zero
+        }
+        else
+        {
+            nextDirection = newDirection;
+        }
+    }
+
+}
