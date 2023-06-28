@@ -27,7 +27,9 @@ public abstract class Movement : MonoBehaviour
         {
             SetDirection(nextDirection);
         }
+
         ChildUpdate();
+
     }
 
     private void FixedUpdate()
@@ -40,7 +42,7 @@ public abstract class Movement : MonoBehaviour
 
     private bool Occupied(Vector2 newDirection)
     {
-        RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one * 0.75f, 0f, newDirection, 1.5f, obstacleLayer);
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one * 0.5f, 0f, newDirection, 1.5f, obstacleLayer);
         return hit.collider != null;
 
     }
@@ -51,10 +53,16 @@ public abstract class Movement : MonoBehaviour
         {
             direction = newDirection;
             nextDirection = Vector2.zero;
+            Debug.Log(nextDirection);
+            Debug.Log(direction);
+            Debug.Log("A");
         }
         else
         {
             nextDirection = newDirection;
+            Debug.Log(nextDirection);
+            Debug.Log(direction);
+            Debug.Log("B");
         }
     }
     abstract protected void ChildUpdate();

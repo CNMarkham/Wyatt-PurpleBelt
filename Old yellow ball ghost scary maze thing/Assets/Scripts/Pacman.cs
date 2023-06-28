@@ -9,26 +9,26 @@ public class Pacman : Movement
     protected override void ChildUpdate()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+     float vertical = Input.GetAxisRaw("Vertical");
 
         if (horizontal != 0 || vertical != 0)
         {
             SetDirection(new Vector2(horizontal, vertical));
-            transform.right = direction;
+         //   Debug.Log(new Vector2(horizontal, vertical));
         }
+        transform.right = direction;
     }
+    // Start is called before the first frame update
+  
 
-   
- 
     // Update is called once per frame
-    void Update()
-    {
+    //void Update()
+    //{
+    //    //if(nextDirection != Vector2.zero)
+    //    //{
+    //    //    SetDirection(nextDirection);
+    //    //}
 
-        if (nextDirection != Vector2.zero)
-        {
-            SetDirection(nextDirection);
-        }
-        ChildUpdate();
-    }
-    
+    //    //ChildUpdate();
+    //}
 }
