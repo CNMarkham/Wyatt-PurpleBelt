@@ -10,8 +10,7 @@ public class Node : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
-       
+         
         availableDirections = new List<Vector2>();
 
         CheckAvailableDirection(Vector2.up);
