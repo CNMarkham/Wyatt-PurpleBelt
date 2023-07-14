@@ -10,8 +10,8 @@ public abstract class Movement : MonoBehaviour
     public LayerMask obstacleLayer;
 
     public Rigidbody2D rb;
-    protected Vector2 direction;
-    protected Vector2 nextDirection;
+    public Vector2 direction;
+    public Vector2 nextDirection;
     // Start is called before the first frame update
     void Start()
     {

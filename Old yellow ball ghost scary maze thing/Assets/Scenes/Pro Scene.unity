@@ -10617,6 +10617,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   rb: {fileID: 2034427275}
+  direction: {x: 0, y: 0}
+  nextDirection: {x: 0, y: 0}
 --- !u!1001 &3399174667255044371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10735,6 +10737,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5053433719785955023, guid: d13fcc622dd545541b081390e00f3685, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476248052665199901, guid: d13fcc622dd545541b081390e00f3685, type: 3}
+      propertyPath: initialDirection.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -68,16 +68,15 @@ public class Ghost : Movement
         {
             int index = Random.Range(0, node.availableDirections.Count);
 
-            //if(node.availableDirections[index] == -direction)
-            //{
-            //    index += 1;
+            if (node.availableDirections[index] == -direction)
+            {
+                index += 1;
+            }
 
-            //    if (index == node.availableDirections.Count)
-            //    {
-            //        index = 0;
-            //    }
-               
-            //}
+            if (index == node.availableDirections.Count)
+            {
+                index = 0;
+            }
             SetDirection(node.availableDirections[index]);
         }
     }
@@ -125,10 +124,5 @@ public class Ghost : Movement
         eyes.SetActive(true);
         blue.SetActive(false);
         white.SetActive(false);
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
