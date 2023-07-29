@@ -1,0 +1,200 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5341758466304660595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5704808678019039997}
+  m_Layer: 0
+  m_Name: mARIO
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5704808678019039997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5341758466304660595}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.8662825, y: -3.755968, z: 0.022829372}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2179946746025573597}
+  - {fileID: 8588420029688264745}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3013415856774787547
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5704808678019039997}
+    m_Modifications:
+    - target: {fileID: 4004113233941646598, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004113233941646598, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004113233941646598, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004113233941646598, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004113233941646598, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004113233941646598, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004113233941646598, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004113233941646598, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004113233941646598, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004113233941646598, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004113233941646598, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956017315935326029, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+      propertyPath: m_Name
+      value: Mario_Big_Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883990650224625326, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883990650224625326, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883990650224625326, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883990650224625326, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+--- !u!4 &2179946746025573597 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4004113233941646598, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+  m_PrefabInstance: {fileID: 3013415856774787547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6061248503545973414
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5704808678019039997}
+    m_Modifications:
+    - target: {fileID: 2010062108562253903, guid: ca80f919e2ad49e4893eac904c6efeb5, type: 3}
+      propertyPath: m_Name
+      value: Mario_Small_Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534915146154963599, guid: ca80f919e2ad49e4893eac904c6efeb5, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534915146154963599, guid: ca80f919e2ad49e4893eac904c6efeb5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534915146154963599, guid: ca80f919e2ad49e4893eac904c6efeb5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534915146154963599, guid: ca80f919e2ad49e4893eac904c6efeb5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534915146154963599, guid: ca80f919e2ad49e4893eac904c6efeb5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534915146154963599, guid: ca80f919e2ad49e4893eac904c6efeb5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534915146154963599, guid: ca80f919e2ad49e4893eac904c6efeb5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534915146154963599, guid: ca80f919e2ad49e4893eac904c6efeb5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534915146154963599, guid: ca80f919e2ad49e4893eac904c6efeb5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534915146154963599, guid: ca80f919e2ad49e4893eac904c6efeb5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534915146154963599, guid: ca80f919e2ad49e4893eac904c6efeb5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658231053770877644, guid: ca80f919e2ad49e4893eac904c6efeb5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ca80f919e2ad49e4893eac904c6efeb5, type: 3}
+--- !u!1 &5762581882917790441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2010062108562253903, guid: ca80f919e2ad49e4893eac904c6efeb5, type: 3}
+  m_PrefabInstance: {fileID: 6061248503545973414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &6169691182312337124
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5762581882917790441}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.0000001, y: 1}
+  m_Direction: 0
+--- !u!4 &8588420029688264745 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2534915146154963599, guid: ca80f919e2ad49e4893eac904c6efeb5, type: 3}
+  m_PrefabInstance: {fileID: 6061248503545973414}
+  m_PrefabAsset: {fileID: 0}
