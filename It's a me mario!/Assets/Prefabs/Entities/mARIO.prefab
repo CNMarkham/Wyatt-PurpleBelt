@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mario_Big_Idle
       objectReference: {fileID: 0}
+    - target: {fileID: 4956017315935326029, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8883990650224625326, guid: 41975f34ccc07f84aad9ac79ae62685b, type: 3}
       propertyPath: m_FlipX
       value: 0
