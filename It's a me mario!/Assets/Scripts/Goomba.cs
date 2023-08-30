@@ -9,8 +9,11 @@ public class Goomba : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Mario: " + collision.transform.position.y);
+            Debug.Log("Goomba: " + transform.position.y + 0.4f);
             if(collision.transform.position.y > transform.position.y + 0.4f)
             {
+                Debug.Log("cool");
                 GetComponent<Animator>().SetTrigger("death");
                 GetComponent<CircleCollider2D>().enabled = false;
                 GetComponent<EnemyMovement>().enabled = false;

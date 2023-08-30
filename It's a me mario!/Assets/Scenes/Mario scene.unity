@@ -324,6 +324,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1365449614046363927, guid: cac3d4fe1f376104498bdc08a4e99aab, type: 3}
   m_PrefabInstance: {fileID: 77725855}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &109853056 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8141961021940375658, guid: 86a4bd742a326b042a2684d046e8edb9, type: 3}
+  m_PrefabInstance: {fileID: 4880531905949641335}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &139231999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1082,11 +1087,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6030487392554825011, guid: a6b38c0fda75c3041ac1f07d7e156cfc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.75
+      value: 4.497
       objectReference: {fileID: 0}
     - target: {fileID: 6030487392554825011, guid: a6b38c0fda75c3041ac1f07d7e156cfc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.44
+      value: -2.507
       objectReference: {fileID: 0}
     - target: {fileID: 6030487392554825011, guid: a6b38c0fda75c3041ac1f07d7e156cfc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1318,7 +1323,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.047786
+  orthographic size: 4.800127
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5500,6 +5505,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5704808678019039997, guid: 86a4bd742a326b042a2684d046e8edb9, type: 3}
   m_PrefabInstance: {fileID: 4880531905949641335}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1513917804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513917796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55c66f65026b6f49bb8c008c41f11a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smallRenderer: {fileID: 109853056}
+  bigRenderer: {fileID: 2018324486}
+  big: 0
 --- !u!1001 &1550063988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5836,7 +5856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6030487392554825011, guid: a6b38c0fda75c3041ac1f07d7e156cfc, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6030487392554825011, guid: a6b38c0fda75c3041ac1f07d7e156cfc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6161,7 +6181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6030487392554825011, guid: a6b38c0fda75c3041ac1f07d7e156cfc, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6030487392554825011, guid: a6b38c0fda75c3041ac1f07d7e156cfc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6913,20 +6933,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1975906733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975906728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5669d3c2cc0eedd49ab9c4f3fc6e6501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 15
-  direction: {x: -1, y: 0}
 --- !u!1001 &1984258915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7019,6 +7025,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   direction: {x: -1, y: 0}
+--- !u!212 &2018324486 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5952504906724210549, guid: 86a4bd742a326b042a2684d046e8edb9, type: 3}
+  m_PrefabInstance: {fileID: 4880531905949641335}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2080879664
 GameObject:
   m_ObjectHideFlags: 0
@@ -9338,6 +9349,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5341758466304660595, guid: 86a4bd742a326b042a2684d046e8edb9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5704808678019039997, guid: 86a4bd742a326b042a2684d046e8edb9, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -9614,7 +9629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5669d3c2cc0eedd49ab9c4f3fc6e6501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 100
   direction: {x: -1, y: 0}
 --- !u!61 &5372645591369923194
 BoxCollider2D:

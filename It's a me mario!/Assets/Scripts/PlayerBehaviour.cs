@@ -14,7 +14,8 @@ using UnityEngine;                                        //   couroutine
                                                           //     |   |
                                                           //     |  /
                                                           //      /  |
-                                                          //     |   |                
+                                                          //     |   |
+                                                             using UnityEngine.SceneManagement;
 public class PlayerBehaviour : MonoBehaviour
 {
     public SpriteRenderer smallRenderer;
@@ -68,9 +69,11 @@ public class PlayerBehaviour : MonoBehaviour
 
         GetComponent<CapsuleCollider2D>().enabled = false;
 
-        GetComponent<Rigidbody2D>().velocity = Vector2.up * 10;
+        GetComponent<Rigidbody2D>().velocity = Vector2.up * 4;
         GetComponent<PlayerMovement>().enabled = false;
-        Destroy(gameObject, 0.5f);
+       // Destroy(gameObject, 2f);
+        Invoke("ResetScene", 2f);
+   
     }
 
     private IEnumerator ChangeSize()
@@ -96,12 +99,18 @@ public class PlayerBehaviour : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        
+        smallAnimator = smallRenderer.gameObject.GetComponent<Animator>();
+        big = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void ResetScene()
+    {
+   SceneManager.LoadScene(0);
     }
 }
