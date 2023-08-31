@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class DeathBarrier : MonoBehaviour
+{
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerBehaviour>().Hit();
+        }
+        else
+        {
+            // Destroy(collision.gameObject);
+            Invoke("ResetScene", 2f);
+        }
+    }
+
+    private void ResetScene()
+    {
+        SceneManager.LoadScene(0);
+    }
+}

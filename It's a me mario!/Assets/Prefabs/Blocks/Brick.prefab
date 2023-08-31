@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3420715137953888312}
   - component: {fileID: 7108611132440998971}
+  - component: {fileID: 7899976694014862043}
   m_Layer: 0
   m_Name: Brick
   m_TagString: Untagged
@@ -84,3 +85,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7899976694014862043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884864225219015645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c280aa8a05c6d94bb88d5930a0b4d95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 4500113676354715256, guid: 7ddaf975cb0dc374b9d12513e6c77582, type: 3}
+  maxHits: 1
+  emptyBlock: {fileID: 0}

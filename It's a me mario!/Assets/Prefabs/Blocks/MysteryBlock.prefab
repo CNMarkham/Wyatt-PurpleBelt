@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8537188624414058740}
   - component: {fileID: 6671423200054424957}
   - component: {fileID: 5469450662065199111}
+  - component: {fileID: -4892844346438956725}
   m_Layer: 0
   m_Name: MysteryBlock
   m_TagString: Untagged
@@ -105,3 +106,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-4892844346438956725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506147212832062823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c280aa8a05c6d94bb88d5930a0b4d95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 4906823726192080412, guid: 29b4af6de8ec60f4faea5d432f0288d1, type: 3}
+  maxHits: 1
+  emptyBlock: {fileID: 21300000, guid: 1c6c93d2a1a86bf4790e7743081d0b9a, type: 3}
