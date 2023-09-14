@@ -9,7 +9,7 @@ public class Goomba : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Mario: " + collision.transform.position.y);
+          Debug.Log("Mario: " + collision.transform.position.y);
             Debug.Log("Goomba: " + transform.position.y + 0.4f);
             if(collision.transform.position.y > transform.position.y + 0.4f)
             {
@@ -32,7 +32,7 @@ public class Goomba : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
