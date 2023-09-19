@@ -6,13 +6,13 @@ public class Tetromino : MonoBehaviour
 {
     public float speed;
     private float previousTime;
-    private float fallTime;
-    private Rigidbody2D rb;
+    private float fallTime = 0.8f;
+    static float width = 10;
+    static float height = 20;
+
     // Start is called before the first frame update
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
+
+   
 
     // Update is called once per frame
     void Update()
@@ -27,8 +27,28 @@ public class Tetromino : MonoBehaviour
             transform.Translate(Vector2.left * Time.deltaTime * speed);
         }
 
-        Vector3 velocity = rb.velocity;
-        velocity.y = Mathf.Min(velocity.y, 0);
-        rb.velocity = velocity;
+        float tempTime = fallTime;
+
+        if (Time.time - previousTime > tempTime)
+        {
+            transform.position += Vector3.down;
+            previousTime = Time.time;      
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            tempTime = tempTime / 10;
+        }
+
+        ValidMove();
+    }
+
+    public bool ValidMove()
+    {
+        foreach (Transform child in transform)
+        {
+            int x = Mathf.RoundToInt(child.transform.position.x);
+            int y = Mathf.RoundToInt(child.transform.position.y);
+        }
+
     }
 }
