@@ -8,8 +8,9 @@ public class Tetromino : MonoBehaviour
     public float speed;
     private float previousTime;
     private float fallTime = 0.8f;
-    public static float width = 10;
-    public static float height = 20;
+    public static float widthLeft = -5;
+    public static float widthRight = 14;
+    public static float height = -2;
     // Start is called before the first frame updateS
 
 
@@ -56,7 +57,6 @@ public class Tetromino : MonoBehaviour
             if (!ValidMove())
             {
                 gameObject.transform.position += Vector3.down;
-
             }
         }
  
@@ -71,13 +71,26 @@ public class Tetromino : MonoBehaviour
             int x = Mathf.RoundToInt(child.transform.position.x);
             int y = Mathf.RoundToInt(child.transform.position.y);
 
-            
-        if((x < 0 || y < 0))
-            {
+            Debug.Log("X positin: " + x);
+        if(x < widthLeft)           
+                { 
+
                 return  false;
             }
 
-            if ((x >= width || y >= height))
+            if ((x >= widthRight || y <= height))
+            {
+                return false;
+            }
+
+
+
+      //      if ((x < 0 || y < 0))
+        //    {
+        //        return false;
+          //  }
+
+            if ((x <= widthLeft || y <= height))
             {
                 return false;
             }
