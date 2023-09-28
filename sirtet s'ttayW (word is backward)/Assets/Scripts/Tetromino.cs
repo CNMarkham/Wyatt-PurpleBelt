@@ -11,12 +11,23 @@ public class Tetromino : MonoBehaviour
     public static float widthLeft = -5;
     public static float widthRight = 14;
     public static float height = -2;
+    public Vector3 rotationPoint;
     // Start is called before the first frame updateS
 
 
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Vector3 convertedPoint = transform.TransformPoint(rotationPoint);
+            transform.RotateAround(convertedPoint, Vector3.forward, 90);
+
+            if (!ValidMove())
+            {
+                transform.RotateAround(convertedPoint, Vector3.forward, -90);
+            }
+        }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             gameObject.transform.position += Vector3.right;//* Time.deltaTime * speedHorizantal;
@@ -56,7 +67,7 @@ public class Tetromino : MonoBehaviour
 
             if (!ValidMove())
             {
-                gameObject.transform.position += Vector3.down;
+                gameObject.transform.position += Vector3.up;
             }
         }
  
@@ -78,19 +89,19 @@ public class Tetromino : MonoBehaviour
                 return  false;
             }
 
-            if ((x >= widthRight || y <= height))
+            if (x >= widthRight)
             {
                 return false;
             }
 
 
 
-      //      if ((x < 0 || y < 0))
-        //    {
-        //        return false;
-          //  }
+            if (y < -2)
+            {
+                return false;
+            }
 
-            if ((x <= widthLeft || y <= height))
+            if ((x <= widthLeft))
             {
                 return false;
             }
@@ -100,3 +111,5 @@ public class Tetromino : MonoBehaviour
         return true;
     }
 }
+
+// || y <= height
