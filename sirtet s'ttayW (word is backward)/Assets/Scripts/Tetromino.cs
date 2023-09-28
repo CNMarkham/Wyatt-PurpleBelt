@@ -8,13 +8,15 @@ public class Tetromino : MonoBehaviour
     public float speed;
     private float previousTime;
     private float fallTime = 0.8f;
+    public static float width = 10;
     public static float widthLeft = -5;
     public static float widthRight = 14;
     public static float height = -2;
     public Vector3 rotationPoint;
+    public static Transform[,] grid = new Transform[width, height];
     // Start is called before the first frame updateS
 
-
+    //do something james pls
     // Update is called once per frame
     void Update()
     {
@@ -68,6 +70,8 @@ public class Tetromino : MonoBehaviour
             if (!ValidMove())
             {
                 gameObject.transform.position += Vector3.up;
+                this.enabled = false;
+                FindObjectOfType<Spawner>().SpawnTetromino();
             }
         }
  
