@@ -8,10 +8,8 @@ public class Tetromino : MonoBehaviour
     public float speed;
     private float previousTime;
     private float fallTime = 0.8f;
-    public static float width = 10;
-    public static float widthLeft = -5;
-    public static float widthRight = 14;
-    public static float height = -2;
+    public static int width = 10;
+    public static int height = 25;
     public Vector3 rotationPoint;
     public static Transform[,] grid = new Transform[width, height];
     // Start is called before the first frame updateS
@@ -51,6 +49,8 @@ public class Tetromino : MonoBehaviour
                 gameObject.transform.position += Vector3.right; //* Time.deltaTime * speedHorizantal;
 
             }
+
+          
         }
 
         
@@ -72,6 +72,7 @@ public class Tetromino : MonoBehaviour
                 gameObject.transform.position += Vector3.up;
                 this.enabled = false;
                 FindObjectOfType<Spawner>().SpawnTetromino();
+                AddToGrid();
             }
         }
  
@@ -83,37 +84,92 @@ public class Tetromino : MonoBehaviour
     {
         foreach (Transform child in transform)
         {
+
+      
+
             int x = Mathf.RoundToInt(child.transform.position.x);
             int y = Mathf.RoundToInt(child.transform.position.y);
 
-            Debug.Log("X positin: " + x);
-        if(x < widthLeft)           
-                { 
-
+            if(x < 0)           
+            { 
                 return  false;
             }
 
-            if (x >= widthRight)
+            if (x >= width)
             {
                 return false;
             }
 
-
-
-            if (y < -2)
+            if (y < 0)
             {
                 return false;
             }
 
-            if ((x <= widthLeft))
+            if (y >= height)
             {
                 return false;
             }
 
+            if (grid[x, y] != null)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public void AddToGrid()
+    {
+        foreach (Transform child in transform)
+        {
+            int x = Mathf.RoundToInt(child.transform.position.x);
+            int y = Mathf.RoundToInt(child.transform.position.y);
+
+            grid[x, y] = child;
+            
+          
+          
+        }
+    }
+
+
+    public void CheckLines()
+    {
+        for (int i = height - 1; i >= 0; i--)
+        {
+            if (HasLine(i))
+            {
+                DeleteLine(i);
+                RowDown(i);
+            }
+        }
+    }
+
+    public bool HasLine(int i)
+    {
+        for (int j=0; j < width; j++)
+        {
+            if(grid[j,i] == null)
+            {
+                return false;
+            }
         }
 
         return true;
     }
-}
+
+    public void DeleteLine(int i)
+    {
+        for (int j = 0; y < height; y++)
+        {
+
+        }
+    }
+
+    public void RowDown(int i)
+    {
+
+
+    }
 
 // || y <= height
