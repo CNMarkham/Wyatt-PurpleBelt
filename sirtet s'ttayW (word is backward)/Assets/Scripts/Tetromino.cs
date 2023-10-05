@@ -18,7 +18,7 @@ public class Tetromino : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             Vector3 convertedPoint = transform.TransformPoint(rotationPoint);
             transform.RotateAround(convertedPoint, Vector3.forward, 90);
@@ -50,13 +50,13 @@ public class Tetromino : MonoBehaviour
 
             }
 
-          
+
         }
 
-        
 
-        float tempTime = fallTime;      
-        
+
+        float tempTime = fallTime;
+
         if (Input.GetKey(KeyCode.DownArrow))
         {
             tempTime = tempTime / 10;
@@ -73,11 +73,12 @@ public class Tetromino : MonoBehaviour
                 this.enabled = false;
                 FindObjectOfType<Spawner>().SpawnTetromino();
                 AddToGrid();
+                CheckLines();
             }
         }
- 
 
-       //ValidMove();
+
+        //ValidMove();
     }
 
     public bool ValidMove()
@@ -85,14 +86,14 @@ public class Tetromino : MonoBehaviour
         foreach (Transform child in transform)
         {
 
-      
+
 
             int x = Mathf.RoundToInt(child.transform.position.x);
             int y = Mathf.RoundToInt(child.transform.position.y);
 
-            if(x < 0)           
-            { 
-                return  false;
+            if (x < 0)
+            {
+                return false;
             }
 
             if (x >= width)
@@ -126,9 +127,9 @@ public class Tetromino : MonoBehaviour
             int y = Mathf.RoundToInt(child.transform.position.y);
 
             grid[x, y] = child;
-            
-          
-          
+
+
+
         }
     }
 
@@ -147,9 +148,9 @@ public class Tetromino : MonoBehaviour
 
     public bool HasLine(int i)
     {
-        for (int j=0; j < width; j++)
+        for (int j = 0; j < width; j++)
         {
-            if(grid[j,i] == null)
+            if (grid[j, i] == null)
             {
                 return false;
             }
@@ -160,16 +161,27 @@ public class Tetromino : MonoBehaviour
 
     public void DeleteLine(int i)
     {
-        for (int j = 0; y < height; y++)
+        for (int j = 0; j < width; j++)
         {
-
+            Destroy(grid[j, i].gameObject);
+            grid[j, i] = null;
         }
     }
 
     public void RowDown(int i)
     {
-
-
+        for (int y = i; y < height; y++)
+        {
+            for (int x = 0; x < width; x++)
+            {
+                if(grid[x, y] != null)
+                {
+                    grid[x, y - 1] = grid[x, y];
+                    grid[x, y] = null;
+                    grid[x, y - 1].transform.position += Vector3.down;
+                }
+            }
+        }
     }
-
+}
 // || y <= height
